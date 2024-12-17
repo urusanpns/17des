@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absen</title>
+    <link rel="stylesheet" href="styles.css">
+<!-- Add Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+
+</head>
+<body>
+    <h1>Absen Kehadiran</h1>
+    
+    <form id="absenForm">
+        <label for="nama">Pilih Nama:</label>
+        <select id="nama" required>
+            <option value="John">John</option>
+            <option value="Jane">Jane</option>
+            <option value="Doe">Doe</option>
+        </select>
+        
+        <label for="status">Pilih Status:</label>
+        <select id="status" required>
+            <option value="hadir">Hadir</option>
+            <option value="sakit">Sakit</option>
+            <option value="ijin">Ijin</option>
+            <option value="cuti">Cuti</option>
+            <option value="dinas luar">Dinas Luar</option>
+        </select>
+
+        <div id="hariInput" style="display: none;">
+            <label for="hari">Pilih Hari:</label>
+            <select id="hari" required>
+                <option value="1">1 Hari</option>
+                <option value="2">2 Hari</option>
+                <option value="3">3 Hari</option>
+                <!-- Tambahkan opsi hingga 365 hari -->
+                <option value="365">365 Hari</option>
+            </select>
+        </div>
+
+        <button type="button" id="absenBtn">Klik Absen</button>
+    </form>
+
+    <div id="dataContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
